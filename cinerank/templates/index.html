@@ -1,6 +1,11 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% load static %}
+<!doctype html>
+<html lang='ko'>
+<head>
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <html>
 
     <head>
@@ -11,8 +16,6 @@
         <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"
             integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9"
             crossorigin="anonymous"></script>
-
-        <script src="main.js"></script>
     </head>
 
     <body>
@@ -47,43 +50,12 @@
                 <div class="location" id="home">
                     <h1 id="home">Popular on Netflix</h1>
                     <div class="box">
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p2.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p3.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p4.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p5.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p6.PNG?raw=true"
-                                alt=""></a>
-
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p7.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p8.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p9.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p10.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p11.PNG?raw=true"
-                                alt=""></a>
-                        <a href=""><img
-                                src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p12.PNG?raw=true"
-                                alt=""></a>
+                        {% for rank in daily_ranks %}
+                                <a href=""><img
+                                        src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true"
+                                        alt=""></a>
+                                <h2>{{ rank.movieNm }}</h2>
+                        {% endfor %}
                     </div>
                 </div>
 
@@ -207,4 +179,5 @@
     </body>
 
     </html>
-{% endblock %}
+</body>
+</html>
