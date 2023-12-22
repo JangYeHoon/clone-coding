@@ -54,13 +54,17 @@
                                 <a href=""><img
                                         src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true"
                                         alt=""></a>
-                                <h2>{{ rank.movieNm }}</h2>
-                                <span>{{ rank.audiCnt }}</span>
-                                <span>{{ rank.audiInten }}</span>
-                                <span>{{ rank.audiAcc }}</span>
-                                <span>{{ rank.salesAmt }}</span>
-                                <span>{{ rank.salesInten }}</span>
-                                <span>{{ rank.salesAcc }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="box">
+                        {% for rank in daily_ranks %}
+                                <div>
+                                        <h2>{{ rank.movieNm }}</h2>
+                                        <p>관객수</p>
+                                        <span>{{ rank.audiCnt }}</span><span>+/- {{ rank.audiInten }}</span>
+                                        <p>누적관객수</p>
+                                        <span>{{ rank.audiAcc }}</span>
+                                </div>
                         {% endfor %}
                     </div>
                 </div>

@@ -9,9 +9,11 @@ class RankApi:
     def get_day_ranks(self, date):
         response = requests.get("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key="
                                 + self.api_key + "&targetDt=" + date)
+        print(response.json())
         return response.json()['boxOfficeResult']['dailyBoxOfficeList']
  
     def get_weekly_ranks(self, date):
         response = requests.get("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key="
                                 + self.api_key + "&targetDt=" + date)
+        print(response.json())
         return response.json()['boxOfficeResult']['weeklyBoxOfficeList']
