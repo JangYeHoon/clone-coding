@@ -18,6 +18,20 @@ body {
   line-height: 1.4;
 }
 
+.movie-box h1 {
+  position: absolute;
+  padding-top: 0px;
+  padding-left: 10px;
+  margin: 0;
+  font-size: 50px;
+}
+
+.movie-box img {
+  border-radius: 2px;
+  object-fit: cover;
+  width: 400px;
+}
+
 img {
   max-width: 100%;
 }
@@ -107,21 +121,6 @@ header {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(5, minmax(100px, 1fr));
-}
-
-.box a {
-  transition: transform .3s;
-}
-
-.box a:hover {
-  transition: transform .3s;
-  -ms-transform: scale(1.4);
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4);
-}
-
-.box img {
-  border-radius: 2px;
 }
 
 /* LINKS */

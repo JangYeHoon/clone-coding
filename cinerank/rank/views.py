@@ -18,6 +18,6 @@ def ranks(request):
     context = {
         'daily_ranks': daily_ranks,
         'year_ago_ranks': year_ago_ranks,
-        'weekly_ranks': weekly_ranks,
+        'weekly_ranks': weekly_ranks
     }
     return render(request, 'index.html', context)
