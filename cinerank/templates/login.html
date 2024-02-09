@@ -16,7 +16,8 @@
     </nav>
     <div class="form-wrapper">
         <h2>Sign In</h2>
-        <form action="#">
+        <form method='POST' action="/users/login/">
+            {% csrf_token %}
             <div class="form-control">
                 <input type="text" required>
                 <label>Email or phone number</label>
@@ -26,13 +27,13 @@
                 <label>Password</label>
             </div>
             <button type="submit">Sign In</button>
-            <div class="form-help">
+            {% comment %} <div class="form-help">
                 <div class="remember-me">
                     <input type="checkbox" id="remember-me">
                     <label for="remember-me">Remember me</label>
                 </div>
                 <a href="#">Need help?</a>
-            </div>
+            </div> {% endcomment %}
         </form>
         <p>New to Netflix? <a href="#">Sign up now</a></p>
         <small>

@@ -13,8 +13,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os, json
 from django.core.exceptions import ImproperlyConfigured
+import pymysql
 
 AUTH_USER_MODEL = 'users.User'
+# mysql 호환
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -146,3 +149,19 @@ def get_secret(setting):
         error_msg = "Set the {} environment variable".format(setting)
         raise ImproperlyConfigured(error_msg)
 SECRET_KEY = get_secret("SECRET_KEY")
+DB_PASSWD = get_secret("DB_PASSWD")
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cinerank',
+        'USER': 'admin',
+        'PASSWORD': DB_PASSWD,
+        'HOST': 'dev-291-db.c7pgm2gboe3a.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTIONS': {
+        'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
+    }
+}
