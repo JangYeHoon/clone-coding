@@ -163,6 +163,15 @@ header {
   border-radius: 3px;
 }
 
+#like-h2 {
+  display: flex;
+}
+
+#like {
+  background-color: transparent;
+  border: none;
+}
+
 /* FOOTER */
 footer {
   padding: 20px;
@@ -291,3 +300,4 @@ footer {
 
 
 }
+

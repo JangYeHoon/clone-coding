@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rank.apis import RankApi
+from movies.apis import RankApi
 from datetime import datetime, timedelta
 
 def ranks(request):
