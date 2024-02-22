@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from movies.apis import RankApi
 from datetime import datetime, timedelta
 
@@ -21,3 +21,7 @@ def ranks(request):
         'weekly_ranks': weekly_ranks
     }
     return render(request, 'index.html', context)
+
+def movie_like(request, movie_id):
+    print("movie like test")
+    return redirect('/movies/ranks/')
