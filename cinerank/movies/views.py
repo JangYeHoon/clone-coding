@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from movies.apis import RankApi
 from datetime import datetime, timedelta
+from movies.models import *
 
 def ranks(request):
     api = RankApi()
@@ -24,4 +25,10 @@ def ranks(request):
 
 def movie_like(request, movie_id):
     print("movie like test")
+    print(type(movie_id))
+    try:
+        movies = Movie.objects.get(cd=movie_id)
+        print("1")
+    except Movie.DoesNotExist:
+        movies = Movie()
     return redirect('/movies/ranks/')
