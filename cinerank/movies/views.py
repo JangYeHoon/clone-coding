@@ -16,19 +16,36 @@ def ranks(request):
     weekly_date = datetime.today() - timedelta(7)
     weekly_ranks = api.get_weekly_ranks(weekly_date.strftime("%Y%m%d"))
 
-    context = {
-        'daily_ranks': daily_ranks,
-        'year_ago_ranks': year_ago_ranks,
-        'weekly_ranks': weekly_ranks
-    }
+    if request.user.is_authenticated:
+        user = request.user
+        movies = user.like_movies.all()
+        like_movies = [str(movie.cd) for movie in movies]
+        print(like_movies)
+        context = {
+            'daily_ranks': daily_ranks,
+            'year_ago_ranks': year_ago_ranks,
+            'weekly_ranks': weekly_ranks,
+            'like_movies': like_movies,
+        }
+    else:
+        context = {
+            'daily_ranks': daily_ranks,
+            'year_ago_ranks': year_ago_ranks,
+            'weekly_ranks': weekly_ranks
+        }
     return render(request, 'index.html', context)
 
 def movie_like(request, movie_id):
-    print("movie like test")
-    print(type(movie_id))
+    movie_name = request.POST.get('movie_name')
+    user = request.user
     try:
-        movies = Movie.objects.get(cd=movie_id)
-        print("1")
+        movie = Movie.objects.get(cd=movie_id)
+        if user.like_movies.filter(id=movie.id).exists():
+            user.like_movies.remove(movie)
+        else:
+            user.like_movies.add(movie)
     except Movie.DoesNotExist:
-        movies = Movie()
+        movie = Movie(cd=movie_id, name=movie_name)
+        movie.save()
+        user.like_movies.add(movie)
     return redirect('/movies/ranks/')

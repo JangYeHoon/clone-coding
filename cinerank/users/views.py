@@ -12,13 +12,13 @@ def login_view(request):
 
         if user:
             login(request, user)
-            return redirect('/rank/ranks')
+            return redirect('/movies/ranks')
         return render(request, 'login.html')
     return render(request, 'login.html')
 
 def logout_view(request):
     logout(request)
-    return redirect('/rank/ranks')
+    return redirect('/movies/ranks')
 
 def signup_view(request):
     if request.method == 'POST':
