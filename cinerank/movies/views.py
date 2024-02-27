@@ -5,16 +5,23 @@ from movies.models import *
 
 def ranks(request):
     api = RankApi()
+    movie_thumbnail = {}
 
     yesterday_date = datetime.today() - timedelta(1)
     daily_ranks = api.get_day_ranks(yesterday_date.strftime("%Y%m%d"))
 
+    for daily_rank in daily_ranks:
+        movie_thumbnail[daily_rank['movieNm']] = api.get_naver_movie_api(daily_rank['movieNm'])
+
     year_ago_date = datetime.today() - timedelta(364)
-    print(year_ago_date)
     year_ago_ranks = api.get_day_ranks(year_ago_date.strftime("%Y%m%d"))
+    for year_ago_rank in year_ago_ranks:
+        movie_thumbnail[year_ago_rank['movieNm']] = api.get_naver_movie_api(year_ago_rank['movieNm'])
 
     weekly_date = datetime.today() - timedelta(7)
     weekly_ranks = api.get_weekly_ranks(weekly_date.strftime("%Y%m%d"))
+    for weekly_rank in weekly_ranks:
+        movie_thumbnail[weekly_rank['movieNm']] = api.get_naver_movie_api(weekly_rank['movieNm'])
 
     if request.user.is_authenticated:
         user = request.user
@@ -26,12 +33,14 @@ def ranks(request):
             'year_ago_ranks': year_ago_ranks,
             'weekly_ranks': weekly_ranks,
             'like_movies': like_movies,
+            'movie_thumbnail': movie_thumbnail
         }
     else:
         context = {
             'daily_ranks': daily_ranks,
             'year_ago_ranks': year_ago_ranks,
-            'weekly_ranks': weekly_ranks
+            'weekly_ranks': weekly_ranks,
+            'movie_thumbnail': movie_thumbnail
         }
     return render(request, 'index.html', context)
 

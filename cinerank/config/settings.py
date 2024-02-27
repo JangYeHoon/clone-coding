@@ -150,7 +150,8 @@ def get_secret(setting):
         raise ImproperlyConfigured(error_msg)
 SECRET_KEY = get_secret("SECRET_KEY")
 DB_PASSWD = get_secret("DB_PASSWD")
-
+NAVER_ID = get_secret("NAVER_ID")
+NAVER_SECRET = get_secret("NAVER_SECRET")
 
 DATABASES = {
     'default': {
