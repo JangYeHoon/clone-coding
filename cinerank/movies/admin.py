@@ -21,3 +21,17 @@ class MovieAdmin(admin.ModelAdmin):
     inlines = [
         LikeUserInline,
     ]
+
+@admin.register(Rank)
+class RankAdmin(admin.ModelAdmin):
+    list_display = [
+        "id",
+        "cd",
+        "name",
+        "rank",
+        "date",
+        "date_week",
+        "audi_cnt",
+        "audi_acc",
+        "thumbnail",
+    ]

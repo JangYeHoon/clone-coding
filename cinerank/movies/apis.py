@@ -14,7 +14,7 @@ class RankApi:
  
     def get_weekly_ranks(self, date):
         response = requests.get("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key="
-                                + self.api_key + "&targetDt=" + date)
+                                + self.api_key + "&targetDt=" + date + "&weekGb=0")
         return response.json()['boxOfficeResult']['weeklyBoxOfficeList']
     
     def get_naver_movie_api(self, movie_name):
@@ -26,3 +26,4 @@ class RankApi:
         if(response.getcode() == 200):
             response_body = response.read()
             response_json = json.loads(response_body.decode('utf-8'))
+            return response_json['items'][0]['thumbnail']

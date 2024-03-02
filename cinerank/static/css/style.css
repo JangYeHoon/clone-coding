@@ -28,8 +28,9 @@ body {
 
 .movie-box img {
   border-radius: 2px;
-  object-fit: cover;
-  width: 400px;
+  background-size: cover;
+  width: 200px;
+  height: 300px;
 }
 
 img {
