@@ -12,7 +12,6 @@ def ranks(request):
         user = request.user
         movies = user.like_movies.all()
         like_movies = [movie.cd for movie in movies]
-        print(like_movies)
         context = {
             'daily_ranks': daily_ranks,
             'year_ago_ranks': year_ago_ranks,
@@ -43,6 +42,15 @@ def movie_like(request, movie_id):
             movie.save()
             user.like_movies.add(movie)
     return redirect('/movies/ranks/')
+
+def movie_likes(request):
+    user = request.user
+    like_movies = user.like_movies.all()
+    context = {
+            'like_movies': like_movies
+        }
+    return render(request, 'like_list.html', context)
+
 
 def get_ranks(target_date, is_day):
     if not Rank.objects.filter(date_week=is_day).filter(date=target_date).exists():
