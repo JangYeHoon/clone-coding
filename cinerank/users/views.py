@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
-from users.models import User
+import requests
 
 # Create your views here.
 def login_view(request):
@@ -22,18 +22,16 @@ def logout_view(request):
 
 def signup_view(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
-        password1 = request.POST.get('password')
-        password2 = request.POST.get('password2')
-
-        if User.objects.filter(username=email).exists():
-            return render(request, 'signup.html')
-        if password1 != password2:
-            return render(request, 'signup.html')
-        user = User.objects.create_user(
-            username=email,
-            password=password1,
-        )
-        login(request, user)
-        return redirect('/rank/ranks')
+        url = 'http://127.0.0.1:8001/users/register/'
+        data = {
+            'username': request.POST.get('username'),
+            'email': request.POST.get('email'),
+            'password': request.POST.get('password'),
+            'password2': request.POST.get('password2')
+        }
+        response = requests.post(url, data=data)
+        if response.status_code == 201:
+            return redirect('/movies/ranks')
+        else:
+            return redirect('/users/signup/')
     return render(request, 'signup.html')

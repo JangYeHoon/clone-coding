@@ -19,6 +19,10 @@
         <form method='POST' action="/users/signup/">
             {% csrf_token %}
             <div class="form-control">
+                <input type="text" required name='username'>
+                <label>nickname</label>
+            </div>
+            <div class="form-control">
                 <input type="text" required name='email'>
                 <label>Email or phone number</label>
             </div>
