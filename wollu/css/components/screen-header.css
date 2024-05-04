@@ -1,0 +1,26 @@
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.screen-header__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen-header__button img {
+    width: 50%;
+    height: 50%;
+}
+
+.screen-header__button p {
+    margin: 0;
+    color: #0017b3;
+    font-family: "Varela Round", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}

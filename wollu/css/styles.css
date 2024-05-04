@@ -1,26 +1,8 @@
-.splash-header {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    right: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Versela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,400;1,600&display=swap');
+@import "reset.css";
 
-.splash-header__subtitle {
-    color: #0017B3;
-}
+@import "screens/splash.css";
+@import "screens/main.css";
 
-.splash-header__title {
-    width: 350px;
-    height: auto;
-}
-
-.splash-header__logo {
-    padding-top: 600px;
-    width: 150px;
-    height: auto;
-}
+@import "components/screen-header.css";
