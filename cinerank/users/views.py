@@ -5,10 +5,12 @@ import requests
 # Create your views here.
 def login_view(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-
-        user = authenticate(username=email, password=password)
+        url = 'http://127.0.0.1:8001/users/login/'
+        data = {
+            'username': request.POST.get('username'),
+            'password': request.POST.get('password')
+        }
+        # user = authenticate(username=email, password=password)
 
         if user:
             login(request, user)
