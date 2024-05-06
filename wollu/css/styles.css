@@ -6,3 +6,9 @@
 @import "screens/main.css";
 
 @import "components/screen-header.css";
+@import "components/box-component.css";
+
+* {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 600;
+}
