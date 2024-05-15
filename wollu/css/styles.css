@@ -5,10 +5,13 @@
 @import "components/screen-header.css";
 @import "components/box-component.css";
 @import "components/category-component.css";
+@import "components/statistics-component.css";
+@import "components/share-component.css";
 
 @import "screens/splash.css";
 @import "screens/main.css";
 @import "screens/current.css";
+@import "screens/result.css";
 
 p {
     margin: 0;

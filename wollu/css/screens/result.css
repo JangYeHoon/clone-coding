@@ -1,0 +1,22 @@
+.result-box {
+    width: 327px;
+    height: 387px;
+    border-radius: 16px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    background-color: #0017B3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-box img {
+    margin-top: 46.73px;
+    margin-bottom: 8px;
+}
+
+.result-box p {
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+}

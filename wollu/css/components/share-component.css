@@ -1,0 +1,14 @@
+.share-text {
+    color: #0017B3;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    margin-bottom: 14px;
+}
+
+.share-icon {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}

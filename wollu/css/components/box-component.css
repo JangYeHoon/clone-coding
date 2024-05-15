@@ -24,12 +24,23 @@
 .box-component__button {
     border: 0;
     padding: 0;
-    background-color: #0017B3;
-    color: #f2f3f6;
     display: flex;
     justify-content: center;
     font-size: 15px;
     font-weight: 600;
+}
+
+.button-blue {
+    background-color: #0017B3;
+    color: #f2f3f6;
+}
+
+.button-white {
+    margin-top: 15px;
+    background-color: white;
+    color: #0017B3;
+    border-color: #0017B3;
+    border: 1px solid;
 }
 
 .timer {

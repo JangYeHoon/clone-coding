@@ -1,0 +1,52 @@
+.statistics-box {
+    background-color: white;
+    width: 327px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+}
+
+.statistics-box p {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.statistics-box__content {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+}
+
+.statistics-box__content:first-child {
+    margin-top: 24px;
+}
+
+.statistics-box__content:last-child {
+    margin-bottom: 24px;
+}
+
+.statistics-box__content-column {
+    display: flex;
+    align-items: center;
+}
+
+.statistics-box__content-column:first-child img {
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+}
+
+.statistics-box__content-column:first-child p:last-child {
+    font-size: 10px;
+    margin-left: 4px;
+    color: #AAAAAA;
+}
+
+.statistics-box__content-column span {
+    font-size: 10px;
+    margin-left: 2px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
