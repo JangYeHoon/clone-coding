@@ -8,18 +8,17 @@
         <title>Wollu</title>
     </head>
     <body>
-        <header class="screen-header">
-            <div class="screen-header__button">
-                <img src="img/header/chart.png"/>
-                <p>통계</p>
-            </div>
-            <div class="screen-header__button">
-                <img src="img/header/info.png"/>
-                <p>내정보</p>
-            </div>
-        </header>
-
-        <main class="main-screen">
+        <div class="main">
+            <header class="screen-header">
+                <div class="screen-header__button">
+                    <img src="img/header/chart.png"/>
+                    <p>통계</p>
+                </div>
+                <div class="screen-header__button">
+                    <img src="img/header/info.png"/>
+                    <p>내정보</p>
+                </div>
+            </header>
             <h1>06:02</h1>
             <div class="main-screen__timer">
                 <img src="img/main/ring.png"/>
@@ -27,24 +26,44 @@
                 <img src="img/main/play.png">
             </div>
             <div class="main-screen__category">
-                <div class="box-component box-component__category">
+                <div class="box-component category-component">
                     <div class="category-component__column">
                         <img src="img/main/coffee.png">
                         <p>커피/간식먹기</p>
                     </div>
                     <div class="category-component__column">
-                        <p class="timer">06:02</p>
+                        <p class="timer enable">06:02</p>
                         <img src="img/main/stop.png">
                     </div>
                 </div>
-                <div class="box-component box-component__plus">
-                    <p>+</p>
+                <div class="box-component category-component">
+                    <div class="category-component__column">
+                        <img src="img/main/smoke.png">
+                        <p>담배피우기</p>
+                    </div>
+                    <div class="category-component__column">
+                        <p class="timer disable">00:00</p>
+                        <img src="img/main/category_play.png">
+                    </div>
                 </div>
-                <div class="box-component box-component__button">
-                    <button>계산하기</button>
-                </div> 
+                <div class="box-component category-component">
+                    <div class="category-component__column">
+                        <img src="img/main/other.png">
+                        <p>딴짓하기</p>
+                    </div>
+                    <div class="category-component__column">
+                        <p class="timer disable">00:02</p>
+                        <img src="img/main/category_play.png">
+                    </div>
+                </div>
+                <div class="box-component box-component__plus">
+                    <span class="enable">+</span>
+                </div>
+                <button type="button" class="box-component box-component__button" onClick="location.href='current.html'">
+                    계산하기
+                </button>
             </div>
-        </main>
+        </div>
         <script src="https://kit.fontawesome.com/d29c528bee.js" crossorigin="anonymous"></script>
     </body>
 </html>

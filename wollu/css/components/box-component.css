@@ -2,35 +2,44 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
-    margin: auto 15rem;
+    width: 327px;
+    height: 42px;
+    background-color: white;
+    border-radius: 8px;
 }
 
-.box-component__category {
-    background-color: gray;
-}
-
-.category-component__column {
+.box-component__plus {
+    background-color: #E3E4EC;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-.category-component__column p {
+.box-component__plus span {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 500;
+    font-size: 24px;
 }
 
-.category-component__column img {
-    height: 30px;
-    width: 30px;
-}
-
-.category-component__column:first-child img {
-    margin-right: 10px;
-}
-
-.category-component__column:last-child p {
-    margin-right: 10px;
+.box-component__button {
+    border: 0;
+    padding: 0;
+    background-color: #0017B3;
+    color: #f2f3f6;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .timer {
+    font-size: 15px;
+}
+
+.enable {
     color: #0017B3;
+}
+
+.disable {
+    color: #AAAAAA;
 }

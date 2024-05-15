@@ -1,0 +1,33 @@
+.category-component {
+    margin-bottom: 10px;
+}
+
+.category-component:first-child {
+    margin-top: 20px;
+}
+
+.category-component__column {
+    display: flex;
+    align-items: center;
+}
+
+.category-component__column:first-child img {
+    margin-left: 16px;
+    height: 16px;
+    width: 16px;
+}
+
+.category-component__column:last-child img {
+    margin-right: 18px;
+    height: 21px;
+    width: 21px;
+}
+
+.category-component__column p {
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+.category-component__column:first-child p {
+    font-size: 12px;
+}

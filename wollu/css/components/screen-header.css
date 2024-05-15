@@ -6,21 +6,19 @@
 }
 
 .screen-header__button {
+    margin-top: 44px;
+    margin-left: 26px;
+    margin-right: 26px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.screen-header__button img {
-    width: 50%;
-    height: 50%;
-}
-
 .screen-header__button p {
     margin: 0;
-    color: #0017b3;
-    font-family: "Varela Round", sans-serif;
-    font-size: 0.7rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
+    padding-top: 3px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    color: #0017B3;
+    font-size: 10px;
+    font-weight: 500;
 }
