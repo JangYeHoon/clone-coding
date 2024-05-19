@@ -1,0 +1,55 @@
+.login-view {
+    border-left: 1px solid;
+    border-color: #0017B3;
+    margin-top: 107px;
+    margin-left: 27px;
+    height: 702px;
+    padding-left: 11px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    position: relative;
+}
+
+.login-view p {
+    font-size: 14px;
+    color: #0017B3;
+    font-weight: 400;
+}
+
+.login-view__step {
+    position: absolute;
+    bottom: 692px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 18px;
+    margin-bottom: 28px;
+}
+
+.login-view input {
+    width: 280px;
+    height: 42px;
+    border: 0px;
+    border-radius: 8px;
+    padding: 0px 18px;
+    margin-bottom: 12px;
+    outline: none;
+    margin: 5px 1px 12px 0px;
+    border: 1px solid white;
+}
+
+.login-view__circle {
+    position: absolute;
+    right: 99%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #0017B3;
+}
+
+.login-view input:focus {
+    box-shadow: 0 0 5px #6B71FF;
+    border: 1px solid #6B71FF;
+}

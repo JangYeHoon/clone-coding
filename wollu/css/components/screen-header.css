@@ -5,6 +5,13 @@
     width: 100%;
 }
 
+.screen-header-one {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
 .screen-header__button {
     margin-top: 44px;
     margin-left: 26px;

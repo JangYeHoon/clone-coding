@@ -9,9 +9,11 @@
 @import "components/share-component.css";
 
 @import "screens/splash.css";
+@import "screens/login.css";
 @import "screens/main.css";
 @import "screens/current.css";
 @import "screens/result.css";
+@import "screens/calender.css";
 
 p {
     margin: 0;
@@ -24,6 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .main {
